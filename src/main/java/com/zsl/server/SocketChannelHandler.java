@@ -43,7 +43,7 @@ public class SocketChannelHandler implements Runnable {
                     }
                     if (selectionKey.isReadable()) {
                         SocketChannel socketChannel = (SocketChannel) selectionKey.channel();
-                        ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+                        ByteBuffer byteBuffer = ByteBuffer.allocate(100);
                         int byteRead = 0;
                         do {
                             byteRead = socketChannel.read(byteBuffer);
